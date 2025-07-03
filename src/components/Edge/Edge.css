@@ -1,0 +1,104 @@
+.edge-label {
+  background: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  font-size: 0.8em;
+}
+
+.edge-arrow {
+  pointer-events: none;
+  user-select: none;
+}
+
+.edge-label {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+
+.react-flow__edge.selected .edge-arrow {
+  color: #ff0072;
+}
+
+.react-flow__edge-path {
+  stroke: #555;
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #ff0072;
+}
+
+.react-flow__edge-path {
+  stroke: #555;
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #ff0072;
+}
+
+.react-flow__edge .react-flow__edge-path {
+  fill: none;
+}
+
+.react-flow__arrowhead {
+  fill: #555;
+}
+
+.react-flow__edge.selected .react-flow__arrowhead {
+  fill: #ff0072;
+}
+
+.edge-label {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Edge.css */
+.react-flow__edge-path {
+  stroke: #555;
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+/* Selected edge style */
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #ff0072; /* Bright pink for high visibility */
+  stroke-width: 3; /* Thicker line when selected */
+  filter: drop-shadow(0 0 2px rgba(255, 0, 114, 0.5));
+}
+
+/* Arrow head styles */
+.react-flow__arrowhead {
+  fill: #555;
+  transition: fill 0.3s ease;
+}
+
+.react-flow__edge.selected .react-flow__arrowhead {
+  fill: #ff0072;
+  transform: scale(1.2); /* Slightly enlarge selected arrow */
+}
+
+/* Edge label styles */
+.edge-label {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.react-flow__edge.selected .edge-label {
+  background: #ff0072;
+  color: white;
+  border-color: #d1005b;
+}

@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pipeline-editor {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.react-flow {
+  flex-grow: 1;
+  background-color: #f8f8f8;
 }
 
-@keyframes App-logo-spin {
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #555;
+}
+
+.react-flow__handle.incoming {
+  left: -5px;
+}
+
+.react-flow__handle.outgoing {
+  right: -5px;
+}
+
+.react-flow__edge-path {
+  stroke: #555;
+  stroke-width: 2;
+  fill: none;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #ff0072;
+}
+
+.react-flow__edge.animated path {
+  stroke-dasharray: 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
   from {
-    transform: rotate(0deg);
+    stroke-dashoffset: 10;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+/* Help Modal Styles */
+.help-content {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 800px;
+  padding: 20px;
+  color: #333;
+}
+
+.help-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.help-section {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.help-section-title {
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+/* Tables */
+.help-table-container {
+  overflow-x: auto;
+}
+
+.help-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.help-table th, .help-table td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.help-table th {
+  background-color: #f8f9fa;
+}
+
+/* Grid Layouts */
+.help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tips-grid, .shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Cards */
+.tip-card, .shortcut-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.tip-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Keyboard Keys */
+kbd {
+  background: #e1e3e5;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+/* Color Samples */
+.color-sample {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.color-sample.red { background: #ff6b6b; }
+.color-sample.green { background: #51cf66; }
+
+/* Invalid Examples */
+.invalid-example {
+  margin: 5px 0;
+  padding: 5px;
+  background: #fff5f5;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Close Button */
+.help-close-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 25px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.help-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.help-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
 }

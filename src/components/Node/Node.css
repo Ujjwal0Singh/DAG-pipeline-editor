@@ -1,0 +1,37 @@
+.pipeline-node {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  min-width: 150px;
+  font-family: Arial, sans-serif;
+}
+
+.pipeline-node.selected {
+  border-color: #ff0072;
+  box-shadow: 0 0 0 1px #ff0072;
+}
+
+.node-header {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px;
+}
+
+.node-title {
+  font-weight: bold;
+}
+
+.node-body {
+  padding: 5px 0;
+}
+
+.node-type-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #555;
+}
