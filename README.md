@@ -1,6 +1,6 @@
 # React Pipeline Editor (DAG Builder)
 
-![Pipeline Editor Demo](demo-screenshot.png)
+![Pipeline Editor Demo](https://github.com/Ujjwal0Singh/DAG-pipeline-editor/blob/main/Screenshot%202025-07-03%20132807.png?raw=true)
 
 A visual editor for creating and managing Directed Acyclic Graphs (DAGs) built with React and ReactFlow. Perfect for data pipeline visualization, workflow automation, and process modeling.
 
@@ -39,7 +39,7 @@ npm run dev
 Build for Production
 npm run build
 npm run preview
-
+```
 🏗️ Architecture
 Key Libraries
 Library	         Purpose
