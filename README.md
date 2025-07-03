@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# React Pipeline Editor (DAG Builder)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Pipeline Editor Demo](demo-screenshot.png)
 
-## Available Scripts
+A visual editor for creating and managing Directed Acyclic Graphs (DAGs) built with React and ReactFlow. Perfect for data pipeline visualization, workflow automation, and process modeling.
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+[![View Demo](https://img.shields.io/badge/Demo-Vercel-green)](https://your-vercel-app-url.vercel.app)  
+*Hosted on Vercel*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Visual Node Editing**: Drag-and-drop interface
+- **Smart Connections**: Direction-aware edge creation
+- **Context Menu**: Right-click nodes for quick actions
+- **DAG Validation**: Real-time cycle detection
+- **Auto-Layout**: Clean organization with Dagre.js
+- **Keyboard Shortcuts**: Quick actions (A=Add, L=Layout, etc.)
 
-### `npm test`
+## 🛠️ Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js (v16+)
+- npm/yarn
 
-### `npm run build`
+### Installation
+```bash
+### Clone the repository
+git clone https://github.com/your-username/pipeline-editor.git
+cd pipeline-editor
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start development server
+npm run dev
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Build for Production
+npm run build
+npm run preview
 
-### `npm run eject`
+🏗️ Architecture
+Key Libraries
+Library	         Purpose
+ReactFlow	       Interactive node-based UI
+Dagre	           Auto-layout algorithms
+React Icons	     Toolbar and menu icons
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Folder Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+src/
+├── components/    # React components
+├── hooks/         # Custom hooks
+├── utils/         # Utility functions
+└── styles/        # CSS modules
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Workflow Demo
+https://dag-pipeline-editor-eight.vercel.app/
 
-## Learn More
+🚧 Challenges & Solutions
+Challenge	                                    Solution
+Connection Direction Rules	             Implemented handle validation with isValidConnection
+Dynamic Node Context Menu	                Used React portals + absolute positioning
+Performance with Many Nodes	             Virtualization with ReactFlow's render optimizations
+Complex State Management	                  Combined useNodesState with custom reducers
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
